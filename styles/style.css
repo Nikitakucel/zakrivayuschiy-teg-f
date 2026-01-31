@@ -302,20 +302,21 @@ body:has(.floppy_dialog[open]) {
 
 
 @media (width <= 375px) {
+
   .main,
   .header,
   .footer {
     width: 100%;
   }
-
+/*
   .main {
     row-gap: 54px;
   }
-
+*/
   .header {
     margin-top: 27vw;
     margin-bottom: 28vw;
-    aspect-ratio: 235 / 109;
+        /* aspect-ratio: 235 / 109; */
     block-size: 325px;
   }
 
@@ -323,10 +324,11 @@ body:has(.floppy_dialog[open]) {
     line-height: 49px;
     letter-spacing: normal;
   }
-
+/*
   .header_subtitle {
     font-size: 14px;
   }
+*/
 
   .article_info {
     padding: 20px 27px 25px 27px;
