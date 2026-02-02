@@ -11,17 +11,26 @@
 */
 
 .page {
-  font-family: var(--main-font);
-  font-variation-settings: "wght" var(--text-weight);
-  font-size: var(--font-size);
-  background-image: var(--background-image);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /*  min-block-size: 100dvb;*/
+    font-family: var(--main-font);
+    font-variation-settings: "wght" var(--text-weight);
+    font-size: var(--font-size);
+
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+  /*  max-inline-size: 700px;*/
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main,
+.header {
+  width: var(--page-width);
 }
 
 .header {
@@ -38,9 +47,8 @@
   margin-block: 103px;
 }
 
-.main,
-.header {
-  width: var(--page-width);
+.header_size {
+  width: clamp(var(--content-size));
 }
 
 .header_title {
@@ -202,16 +210,16 @@
 }
 
 .decorated_button {
-  align-items: center;
-  background-color: white;
-  border: 2px solid var(--color);
-  color: white;
-  cursor: pointer;
-  font-family: var(--accent-font);
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  transition: box-shadow 0.3s ease;
+    align-items: center;
+    background-color: white;
+    border: 2px solid var(--color);
+    color: white;
+    cursor: pointer;
+    font-family: var(--accent-font);
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow 0.3s ease;
 }
 
 .save_button {
@@ -249,10 +257,19 @@
   translate: 0%;
 }
 
+
+/*
+.floppy_dialog {
+}*/
+
 .floppy_dialog[open] {
+  /*position: fixed;*/
+ /* inset: 0;*/
+ /* display: flex;*/
   flex-shrink: 0;
   border: var(--main-border);
   padding: 30px;
+/*  min-inline-size: 341px;*/
   inline-size: 354px;
 }
 
@@ -263,6 +280,7 @@
 body:has(.floppy_dialog[open]) {
   overflow: hidden;
 }
+
 
 .dialog_description {
   display: flex;
@@ -292,31 +310,37 @@ body:has(.floppy_dialog[open]) {
 
 .article_image {
   display: block;
+
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
   max-block-size: 100%;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-
-
+@supports (
+  (text-stroke: 1px var(--shadow-color)) or
+    (-webkit-text-stroke: 1px var(--shadow-color))) {
+  .card_label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--shadow-color);
+    text-stroke: 1px var(--shadow-color);
+  }
+}
 
 @media (width <= 375px) {
-
   .main,
   .header,
   .footer {
     width: 100%;
   }
-/*
-  .main {
-    row-gap: 54px;
-  }
-*/
+
   .header {
     margin-top: 27vw;
     margin-bottom: 28vw;
-        /* aspect-ratio: 235 / 109; */
     block-size: 325px;
   }
 
@@ -324,11 +348,6 @@ body:has(.floppy_dialog[open]) {
     line-height: 49px;
     letter-spacing: normal;
   }
-/*
-  .header_subtitle {
-    font-size: 14px;
-  }
-*/
 
   .article_info {
     padding: 20px 27px 25px 27px;
@@ -348,8 +367,8 @@ body:has(.floppy_dialog[open]) {
   }
 
   .floppy_svg {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
   }
 
   .decorated_button_text {
