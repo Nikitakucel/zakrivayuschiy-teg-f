@@ -77,13 +77,13 @@
 .card_item {
   display: grid;
   border: var(--main-border);
-  background-color: white;
+  background-color: var(--background-color);
 }
 
 .article {
   outline: 2px solid var(--color);
   width: 100%;
-  background-color: white;
+  background-color: var(--background-color);
   margin-bottom: 54px;
 }
 
@@ -101,7 +101,7 @@
 
 .article_image_box {
   position: relative;
-  margin: 0px 0px 5px 0px;
+  margin: 0 0 5px 0;
   outline: var(--main-border);
 }
 
@@ -204,7 +204,7 @@
 
 .mix_difference {
   fill: white;
-  color: #fff;
+  color: var(--button-text-color);
   background-color: transparent;
   mix-blend-mode: difference;
 }
@@ -230,9 +230,9 @@
 }
 
 .decorated_button_text {
-    font-size: var(--button-font-size);
-    mix-blend-mode: difference;
-    margin-right: 5px;
+  font-size: var(--button-font-size);
+  mix-blend-mode: difference;
+  margin-right: 5px;
 }
 
 .decorated_button::before {
@@ -246,11 +246,11 @@
 
 .decorated_button:focus-visible {
   outline: 2px solid var(--color);
+  box-shadow: 2px 2px 0 1px var(--color);
 }
 
 .decorated_button:focus {
   outline: none;
-  box-shadow: 2px 2px 0 1px var(--color);
 }
 
 .decorated_button:hover::before {
@@ -338,7 +338,7 @@ body:has(.floppy_dialog[open]) {
   .header {
     margin-top: 27vw;
     margin-bottom: 28vw;
-    block-size: 325px;
+    /*block-size: 325px;*/
   }
 
   .header_title {
