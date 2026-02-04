@@ -11,21 +11,17 @@
 */
 
 .page {
-  /*  min-block-size: 100dvb;*/
-    font-family: var(--main-font);
-    font-variation-settings: "wght" var(--text-weight);
-    font-size: var(--font-size);
-
-    background-image: var(--background-image);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-  /*  max-inline-size: 700px;*/
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: var(--main-font);
+  /*font-variation-settings: "wght" var(--text-weight);*/
+  font-size: var(--font-size);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main,
@@ -93,7 +89,7 @@
 
 .article_title {
   padding: 5px 10px;
-  font-variation-settings: "wght" var(--title-weight);
+  font-weight: 715;
   color: var(--color);
   background-color: var(--background-color);
   font-size: var(--font-size);
@@ -130,6 +126,7 @@
 }
 
 .article_text:last-of-type {
+  font-weight: 410;
   margin-block-end: 25px;
 }
 
@@ -203,23 +200,23 @@
 }
 
 .mix_difference {
-  fill: white;
+  fill: var(--text-color);
   color: var(--button-text-color);
   background-color: transparent;
   mix-blend-mode: difference;
 }
 
 .decorated_button {
-    align-items: center;
-    background-color: white;
-    border: 2px solid var(--color);
-    color: white;
-    cursor: pointer;
-    font-family: var(--accent-font);
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    transition: box-shadow 0.3s ease;
+  align-items: center;
+  background-color: var(--button-text-color);
+  border: 2px solid var(--color);
+  color: var(--text-color);
+  cursor: pointer;
+  font-family: var(--accent-font);
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s ease;
 }
 
 .save_button {
@@ -257,19 +254,10 @@
   translate: 0%;
 }
 
-
-/*
-.floppy_dialog {
-}*/
-
 .floppy_dialog[open] {
-  /*position: fixed;*/
- /* inset: 0;*/
- /* display: flex;*/
   flex-shrink: 0;
   border: var(--main-border);
   padding: 30px;
-/*  min-inline-size: 341px;*/
   inline-size: 354px;
 }
 
@@ -280,7 +268,6 @@
 body:has(.floppy_dialog[open]) {
   overflow: hidden;
 }
-
 
 .dialog_description {
   display: flex;
@@ -338,7 +325,6 @@ body:has(.floppy_dialog[open]) {
   .header {
     margin-top: 27vw;
     margin-bottom: 28vw;
-    /*block-size: 325px;*/
   }
 
   .header_title {
