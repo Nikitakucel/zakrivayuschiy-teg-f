@@ -163,7 +163,7 @@
   animation: sparks var(--time-step) ease-in var(--time-step) 1;
 }
 
-/*.card__icon-button .is-liked .core {
+.card__icon-button .is-liked .core {
   fill: var(--heart-sparks-color);
   transition: fill var(--time-step) linear 0s;
 }
@@ -190,6 +190,6 @@
 .card__icon-button:focus-visible {
   outline-color: black;
   transition:  outline-color var(--time-step) linear;
-}
+}*/
 
 

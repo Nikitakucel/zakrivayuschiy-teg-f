@@ -12,7 +12,7 @@
 
 .page {
   font-family: var(--main-font);
-  /*font-variation-settings: "wght" var(--text-weight);*/
+  font-variation-settings: "wght" var(--text-weight);
   font-size: var(--font-size);
   background-image: var(--background-image);
   background-size: cover;
@@ -89,7 +89,7 @@
 
 .article_title {
   padding: 5px 10px;
-  font-weight: 715;
+  font-variation-settings: "wght" 715;
   color: var(--color);
   background-color: var(--background-color);
   font-size: var(--font-size);
@@ -125,8 +125,8 @@
   margin-block-end: 27px;
 }
 
-.article_text:last-of-type {
-  font-weight: 410;
+.article_text {
+  font-variation-settings: "wght" 410;
   margin-block-end: 25px;
 }
 
